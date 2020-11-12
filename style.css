@@ -49,6 +49,12 @@ header, body > section {
 footer{
     min-height: 20px;
     text-align: center;
+    padding: 10px;
+    background: black;
+}
+
+footer a{
+    color: white;
 }
 
 #side-menu{
@@ -101,8 +107,10 @@ body{
 
 #top-menu-bar a{
     text-decoration: none;
-    padding: 0 15px 0 15px;
+    padding: 5px 15px 5px 15px;
+    margin 2px 0;
     color: #ffffff;
+    display: inline-block;
 }
 
 li{
