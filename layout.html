@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        header, footer, #side-menu section{
+            margin: 2px;
+            padding: 4px;
+            border: 2px solid blue;
+        }
+
+        #content{
+            margin: 2px;
+            padding: 4px;
+            border: 2px solid red;
+        }
+        #side-menu{
+            margin: 2px;
+            padding: 4px;
+            border: 2px solid green;
+        }
+        #main{
+            margin: 2px;
+            padding: 4px;
+            border: 2px solid green;
+        }
+
+        body{
+            margin: 0;
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header, body > section {
+            flex: 1;
+        }
+
+        #content{
+            flex: 4;
+            display: flex;
+            flex-direction: row;
+        }
+
+        footer{
+            min-height: 20px;
+            text-align: center;
+        }
+
+        #side-menu{
+            flex: 1;
+        }
+
+        #main{
+            flex: 4;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>H</header>
+    <section id="content">
+        <div id="side-menu">
+            <section>M1</section>
+            <section>M2</section>
+        </div>
+        <div id="main">Center</div>
+    </section>
+    <footer>F</footer>
+</body>
+</html>

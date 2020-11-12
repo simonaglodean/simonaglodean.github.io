@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My CV</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <h1>CV</h1>
+            <h2>Simona Glodean</h2>
+            <img src="./poza.jpg" width="100" height="150" alt="poza">
+
+            <p id="job-title">Web Developer</p>
+        </div>
+
+        <ul id="top-menu-bar">
+            <li><a href="#" onclick="showHome()" >Home</a></li>
+            <li><a href="#" onclick="showSkills()">Skills</a></li>
+            <li><a href="#" onclick="showProjects()" >Projects</a></li>
+            <li><a href="#" onclick="showLanguages()" >Languages</a></li>
+
+        </ul>
+
+    </header>
+    <section id="content">
+        <div id="side-menu">
+            <section>
+                <form action="">
+                    <label for="e">Email</label>
+                    <input type="email" name="em" id="e">
+                    <input type="text" name="nume" id="name" placeholder="Your name">
+                    <button>Contact us</button>
+                </form>
+
+            </section>
+            <section>
+
+            </section>
+        </div>
+        <div id="main">
+            <div id="home" class="page">
+                <h2>Home</h2>
+            </div>
+            <div id="skills" class="page" style="display: none;">
+                <h2>Skills & Endorsments</h2>
+
+                <ul>
+                    <li class="favorite">HTML</li>
+                    <li>CSS</li>
+                    <li class="favorite">Javascript</li>
+                </ul>
+            </div>
+
+            <div id="projects" class="page" style="display: none;">
+                <h2>Projects</h2>
+            </div>
+
+            <div id="languages" class="page" style="display: none;">
+                <h2>Known Languages</h2>
+                <table border="1">
+                    <tr>
+                        <td>English</td>
+                        <td>Avanced</td>
+                    </tr>
+                    <tr>
+                        <td>French</td>
+                        <td>Intermediate</td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    </section>
+    <footer>
+        <a target="_blank" href="https://fasttrackit.org/curs-web-cluj-napoca/">Curs Web</a>
+    </footer>
+
+<script src="functions.js"></script>
+    
+    <script>
+        /*console.info("Salut!");
+        var name = "Simona"; */
+
+    </script>
+</body>
+
+</html>
