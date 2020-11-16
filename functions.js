@@ -20,6 +20,7 @@ function hideAllPages(){
     }
 
 }
+
 function showPage(pageId){
     hideAllPages();
     document.getElementById(pageId).style.display = '';
@@ -28,12 +29,22 @@ function showPage(pageId){
 function initMenu(){
     document.addEventListener("click", function(e){
         var link = e.target;
-        if (e.target.matches("#top-menu-bar a")) {
+        if (link.matches("#top-menu-bar a")) {
             var id = link.innerHTML.toLowerCase();
             showPage(id);
-        }
-        
+        } 
     })
 }
 
 initMenu();
+
+showPage("skills");
+
+var skills = ["HTML", "CSS", "Javascript"];
+
+
+// to do: add "favorite" skill
+var ul = document.querySelector("#skills ul");
+ul.innerHTML = "<li>" + skills[0] + "</li>" +
+               "<li>" + skills[1] + "</li>" +
+               "<li>" + skills[2] + "</li>";
