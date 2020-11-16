@@ -6,37 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My CV</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./all.css">
 </head>
 
 <body>
 
     <header>
-        <div>
-            <h1>CV</h1>
-            <h2>Simona Glodean</h2>
-            <img src="./poza.jpg" width="100" height="150" alt="poza">
-
-            <p id="job-title">Web Developer</p>
+        <div class="top-header" >
+            <div class="info">
+                <div id="selfie">
+                    <img src="./poza.jpg" width="100" height="150" alt="poza">
+                    
+                </div>
+                <div id="top-info">
+                    <h2 id="my-name" >Simona Glodean</h2>
+                    <h3 id="job-title">Front End Developing Learner</h2>
+                    <p>Cluj-Napoca, Romania</p>
+                    <p>30 years old</p>
+                    
+                    
+                </div>
+            </div>
+            
         </div>
 
         <ul id="top-menu-bar">
-            <li><a href="#" onclick="showHome()" >Home</a></li>
-            <li><a href="#" onclick="showSkills()">Skills</a></li>
-            <li><a href="#" onclick="showProjects()" >Projects</a></li>
-            <li><a href="#" onclick="showLanguages()" >Languages</a></li>
+            <li><a href="#" onclick="showPage('home')" >Home</a></li>
+            <li><a href="#" onclick="showPage('skills')">Skills</a></li>
+            <li><a href="#" onclick="showPage('projects')" >Projects</a></li>
+            <li><a href="#" onclick="showPage('languages')" >Languages</a></li>
 
         </ul>
 
     </header>
     <section id="content">
         <div id="side-menu">
-            <section>
-                <form action="">
-                    <label for="e">Email</label>
-                    <input type="email" name="em" id="e">
-                    <input type="text" name="nume" id="name" placeholder="Your name">
-                    <button>Contact us</button>
-                </form>
+            <section id="social-media">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
 
             </section>
             <section>
@@ -46,6 +56,7 @@
         <div id="main">
             <div id="home" class="page">
                 <h2>Home</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta maxime amet praesentium quasi beatae, eius modi voluptatum et suscipit nihil.</p>
             </div>
             <div id="skills" class="page" style="display: none;">
                 <h2>Skills & Endorsments</h2>
@@ -86,8 +97,7 @@
 <script src="functions.js"></script>
     
     <script>
-        /*console.info("Salut!");
-        var name = "Simona"; */
+
 
     </script>
 </body>

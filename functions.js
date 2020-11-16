@@ -11,28 +11,34 @@ function hide(id) {
 }
 
 function hideAllPages(){
-    hide("home");
-    hide("skills");
-    hide("projects");
-    hide("languages");
+
+    var pages = document.querySelectorAll(".page");
+    //for(initializare; conditie; post execute)
+    for(var i = 0; i < pages.length; i++) {
+        var page = pages[i];
+        var id = page.id;
+        console.info("i=", i, id, page);
+        hide(id);
+    }
+
+}
+function showPage(pageId){
+    hideAllPages();
+    document.getElementById(pageId).style.display = '';
 }
 
 function showHome() {
-    hideAllPages();
-    document.getElementById('home').style.display = '';
+    showPage('home');
 }
 
 function showSkills() {
-    hideAllPages();
-    document.getElementById('skills').style.display = '';
+    showPage('skills');
 }
 
 function showProjects() {
-    hideAllPages();
-    document.getElementById("projects").style.display = '';
+    showPage('projects');
 }
 function showLanguages() {
-    hideAllPages();
-    document.getElementById("languages").style.display = '';
+    showPage('languages');
 }
 
