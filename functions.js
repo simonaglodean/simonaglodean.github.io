@@ -24,3 +24,16 @@ function showPage(pageId){
     hideAllPages();
     document.getElementById(pageId).style.display = '';
 }
+
+function initMenu(){
+    document.addEventListener("click", function(e){
+        var link = e.target;
+        if (e.target.matches("#top-menu-bar a")) {
+            var id = link.innerHTML.toLowerCase();
+            showPage(id);
+        }
+        
+    })
+}
+
+initMenu();
