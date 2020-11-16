@@ -1,6 +1,5 @@
 function hide(id) {
     console.info("hide:" + id);
-    // document.getElementById(id).style.display = "none";
     var el = document.getElementById(id);
     console.info("hide:" + id + el);
     if (el) {
@@ -11,7 +10,6 @@ function hide(id) {
 }
 
 function hideAllPages(){
-
     var pages = document.querySelectorAll(".page");
     //for(initializare; conditie; post execute)
     for(var i = 0; i < pages.length; i++) {
@@ -26,19 +24,3 @@ function showPage(pageId){
     hideAllPages();
     document.getElementById(pageId).style.display = '';
 }
-
-function showHome() {
-    showPage('home');
-}
-
-function showSkills() {
-    showPage('skills');
-}
-
-function showProjects() {
-    showPage('projects');
-}
-function showLanguages() {
-    showPage('languages');
-}
-
