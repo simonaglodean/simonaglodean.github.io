@@ -40,12 +40,6 @@ initMenu();
 
 showPage(activePage);
 
-var allSkills = [
-    { name: "HTML", endorsments: 15 },
-    { name: "CSS", endorsments: 5 }, 
-    { name: "Javascript", endorsments: 20 }
-];
-
 function showSkills(skills){
     var skillsLi = skills.map(function(skill){
         var endorsments = ` <span>&middot; ${skill.endorsments}</span>`;
@@ -57,4 +51,10 @@ function showSkills(skills){
     ul.innerHTML = skillsLi.join("");
 }
 
-showSkills(allSkills);
+fetch("data/skills.json").then(function(r){
+    return r.json();
+}).then(function(allSkills){
+    showSkills(allSkills);
+});
+
+ 
