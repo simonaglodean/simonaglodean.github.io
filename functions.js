@@ -41,14 +41,15 @@ initMenu();
 showPage(activePage);
 
 var skills = [
-    "HTML",
-    "CSS", 
-    "Javascript"
+    { name: "HTML", endorsments: 15 },
+    { name: "CSS", endorsments: 5 }, 
+    { name: "Javascript", endorsments: 20 }
 ];
 
 
 var skillsLi = skills.map(function(skill){
-    return "<li>" + skill + "</li>";
+    var endorsments = ` <span>&middot; ${skill.endorsments}</span>`;
+    return "<li>" + skill.name + endorsments + "</li>";
 });
 
 // to do: add "favorite" skill

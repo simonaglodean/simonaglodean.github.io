@@ -179,8 +179,15 @@ body{
     display: inline-block;
 }
 
-li{
-    color: blue;
+#skills li {
+    color: #334455;
+    font-weight: 800;
+}
+
+
+#skills li span{
+    font-weight: 200;
+    color: grey;
 }
 
 .favorite{
