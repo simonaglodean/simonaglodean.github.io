@@ -165,7 +165,8 @@ body{
     color: #ffffff;
 }
 
-#top-menu-bar a:hover{
+#top-menu-bar a:hover, 
+#top-menu-bar a.active {
     color: #334455;
     background-color: #ffffff;
 }

@@ -1,3 +1,5 @@
+var activePage = "skills";
+
 function hide(id) {
     console.info("hide:" + id);
     var el = document.getElementById(id);
@@ -9,21 +11,15 @@ function hide(id) {
     }
 }
 
-function hideAllPages(){
-    var pages = document.querySelectorAll(".page");
-    //for(initializare; conditie; post execute)
-    for(var i = 0; i < pages.length; i++) {
-        var page = pages[i];
-        var id = page.id;
-        console.info("i=", i, id, page);
-        hide(id);
-    }
 
+function hidePreviousPage() {
+    hide(activePage);
 }
 
 function showPage(pageId){
-    hideAllPages();
+    hidePreviousPage();
     document.getElementById(pageId).style.display = '';
+    activePage = pageId;
 }
 
 function initMenu(){
@@ -38,7 +34,7 @@ function initMenu(){
 
 initMenu();
 
-showPage("skills");
+showPage(activePage);
 
 var skills = [
     "HTML",
