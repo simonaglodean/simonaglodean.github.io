@@ -8,7 +8,7 @@ html{
     height: 100%;
 }
 
-header, footer, #side-menu section{
+header, footer{
     margin: 2px;
     padding: 4px;
     /* border: 2px solid blue; */
@@ -36,11 +36,12 @@ header, footer, #side-menu section{
 }
 
 img{
-    width: 140px;
+    width: 200px;
     height: 200px;
     margin-left: 18px;
     margin-top: 20px;
-    border-radius: 10px;
+    border-radius: 100px;
+    border: 3px solid white;
 }
 
 #my-name{
@@ -66,9 +67,11 @@ img{
     /* border: 2px solid red; */
 }
 #side-menu{
-    margin: 2px;
-    padding: 4px;
-    padding: 5px;
+    background-color: #ffffff;
+    margin: 21px 0;
+    padding: 24px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .15), 0 2px 3px rgba(0, 0, 0, .2);
+    border-radius: 2px;
     /* border: 2px solid green; */
 }
 #social-media{
@@ -80,7 +83,7 @@ img{
     color: rgba(112, 88, 124, 0.7);
     font-size: 40px;
     padding: 10px;
-    margin-left: 25px;
+    margin-left: 35px;
     
 }
 
