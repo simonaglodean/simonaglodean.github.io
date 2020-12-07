@@ -40,16 +40,21 @@ initMenu();
 
 showPage(activePage);
 
-function showSkills(skills){
+function getHTMLSkills(skills) {
     var skillsLi = skills.map(function(skill){
         var endorsments = ` <span>&middot; ${skill.endorsments}</span>`;
         return "<li>" + skill.name + endorsments + "</li>";
     });
+    return skillsLi.join("");
+}
+
+function showSkills(skills){
+    var html = getHTMLSkills(skills);
     
     // to do: add "favorite" skill
     // to do: sort by endorsments
     var ul = document.querySelector("#skills ul");
-    ul.innerHTML = skillsLi.join("");
+    ul.innerHTML = html;
 }
 
 fetch("data/skills.json").then(function(r){
