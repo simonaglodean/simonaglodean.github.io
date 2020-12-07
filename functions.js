@@ -47,6 +47,7 @@ function showSkills(skills){
     });
     
     // to do: add "favorite" skill
+    // to do: sort by endorsments
     var ul = document.querySelector("#skills ul");
     ul.innerHTML = skillsLi.join("");
 }
