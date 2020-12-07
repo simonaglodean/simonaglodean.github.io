@@ -43,7 +43,9 @@ showPage(activePage);
 function getHTMLSkills(skills) {
     var skillsLi = skills.map(function(skill){
         var endorsments = ` <span>&middot; ${skill.endorsments}</span>`;
-        return "<li>" + skill.name + endorsments + "</li>";
+        return `<li class="${skill.endorsments > 9 ? "favorite" : ""}">
+        ${skill.name} ${endorsments}
+        </li>`;
     });
     return skillsLi.join("");
 }
@@ -51,7 +53,6 @@ function getHTMLSkills(skills) {
 function showSkills(skills){
     var html = getHTMLSkills(skills);
     
-    // to do: add "favorite" skill
     // to do: sort by endorsments
     var ul = document.querySelector("#skills ul");
     ul.innerHTML = html;

@@ -184,7 +184,6 @@ body{
 
 #skills li {
     color: #334455;
-    font-weight: 800;
 }
 
 
@@ -194,9 +193,7 @@ body{
 }
 
 .favorite{
-    /* background-color: yellowgreen; */
-    font-style: italic;
-    color: blueviolet;
+    font-weight: 800;
 }
 
 
