@@ -42,25 +42,25 @@ showPage(activePage);
 
 function getHTMLSkills(skills) {
     var skillsLi = skills.map(function(skill){
-        var endorsments = ` <span>&middot; ${skill.endorsments}</span>`;
         return `<li class="${skill.endorsments > 9 ? "favorite" : ""}">
-        ${skill.name} ${endorsments}
+        ${skill.name}<span>&middot; ${skill.endorsments}</span>
         </li>`;
     });
     return skillsLi.join("");
 }
 
-function showSkills(skills){
-    var html = getHTMLSkills(skills);
-    
-    // to do: sort by endorsments
+function showSkills(skills){  
     var ul = document.querySelector("#skills ul");
-    ul.innerHTML = html;
+    ul.innerHTML = getHTMLSkills(skills);
 }
 
 fetch("data/skills.json").then(function(r){
     return r.json();
 }).then(function(allSkills){
+    allSkills.sort(function(s1, s2){
+        return s2.endorsments - s1.endorsments;
+    });
+
     showSkills(allSkills);
 });
 
