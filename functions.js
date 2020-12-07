@@ -27,7 +27,7 @@ function showPage(pageId){
 }
 
 function initMenu(){
-    document.addEventListener("click", function(e){
+    document.addEventListener("click", (e) => {
         const link = e.target;
         if (link.matches("#top-menu-bar a")) {
             const id = link.getAttribute("data-page").toLowerCase();
@@ -41,7 +41,7 @@ initMenu();
 showPage(activePage);
 
 function getHTMLSkills(skills) {
-    return skills.map(function(skill){
+    return skills.map((skill) => {
         return `<li class="${skill.endorsments > 9 ? "favorite" : ""}">
         ${skill.name}<span>&middot; ${skill.endorsments}</span>
         </li>`;
@@ -53,10 +53,10 @@ function showSkills(skills){
     ul.innerHTML = getHTMLSkills(skills);
 }
 
-fetch("data/skills.json").then(function(r){
+fetch("data/skills.json").then((r) => {
     return r.json();
-}).then(function(allSkills){
-    allSkills.sort(function(s1, s2){
+}).then((allSkills) => {
+    allSkills.sort((s1, s2) => {
         return s2.endorsments - s1.endorsments;
     });
 
