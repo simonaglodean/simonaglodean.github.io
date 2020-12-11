@@ -74,13 +74,13 @@ img{
     border-radius: 2px;
     /* border: 2px solid green; */
 }
-#social-media{
+.social-media{
     display: inline-block;
     
 
 }
-#social-media > a{
-    color: rgba(112, 88, 124, 0.7);
+.social-media > a{
+    color: rgba(255, 255, 255, 0.7);
     font-size: 40px;
     padding: 10px;
     margin-left: 35px;
