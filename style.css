@@ -57,7 +57,7 @@ img{
     margin-left: 20px;
     width: 450px;
     height: 275px;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 
@@ -87,6 +87,11 @@ img{
 
 #side-menu>button:hover{
     background-color:  rgba(112, 88, 124, 0.3);
+}
+
+#side-menu>button>a{
+    color: white;
+    text-decoration: none;
 }
 
 .social-media{
